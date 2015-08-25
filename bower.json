@@ -1,0 +1,11 @@
+{
+  "name": "fifteen-puzzle",
+  "description": "15-puzzle gam",
+  "version": "0.0.1",
+  "homepage": "https://github.com/timasjov/fifteen-puzzle",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "angular": "1.4.x"
+  }
+}
