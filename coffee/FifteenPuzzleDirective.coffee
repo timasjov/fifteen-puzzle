@@ -1,5 +1,7 @@
 "use strict"
+
 module = angular.module("fifteenPuzzleDirective", [])
+
 module.directive "fifteenPuzzle", (fifteenPuzzle) ->
   restrict: "EA"
   replace: true
