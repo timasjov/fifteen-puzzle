@@ -1,6 +1,10 @@
+@base-background: #f7f7f7;
+@empty-cell-background: #ddd;
+@base-font: 12pt 'Arial', 'Helvetica';
+
 body {
-    font: 12pt 'Arial', 'Helvetica';
-    background-color: #f7f7f7;
+    font: @base-font;
+    background-color: @base-background;
     margin-top: 110px;
     margin-left: 20px;
 }
@@ -11,13 +15,15 @@ body {
     clear: both;
     margin-top: 30px;
 }
+
 .fifteen-puzzle td {
     border-collapse: collapse;
     border: 2px outset white;
     cursor: pointer;
     padding: 0;
 }
+
 .fifteen-puzzle .puzzle-empty {
     border: none;
-    background-color: #ddd !important;
+    background-color: @empty-cell-background !important;
 }
