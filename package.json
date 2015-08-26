@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "private": false,
+  "name": "fifteen-puzzle",
+  "description": "15-puzzle game",
+  "repository": "https://github.com/timasjov/fifteen-puzzle",
+  "license": "MIT",
+  "devDependencies": {
+    "bower": "latest",
+    "coffee-script": "latest",
+    "less": "latest",
+    "grunt-contrib-coffee": "latest",
+    "grunt-contrib-less": "latest"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+    "prestart": "npm install & grunt compile"
+  }
+}
