@@ -1,8 +1,21 @@
 module.exports = (grunt) ->
+  grunt.loadNpmTasks 'grunt-contrib-coffee'
+  grunt.loadNpmTasks('grunt-contrib-watch')
+  grunt.loadNpmTasks 'grunt-contrib-less'
+
   grunt.initConfig
     pkg: grunt.file.readJSON 'package.json'
+
+    watch:
+      coffee:
+        files: 'coffee/*.coffee'
+        tasks: ['coffee:coffeeToJs']
+      less:
+        files: 'styles/*.less'
+        tasks: ['less:lessToCss']
+
     coffee:
-      coffee_to_js:
+      coffeeToJs:
         options:
           bare: true
           sourceMap: true
@@ -12,16 +25,10 @@ module.exports = (grunt) ->
         src: ["*.coffee"]
         dest: 'dist/js'
         ext: ".js"
-    less:
-      development:
-        options:
-          compress: true
-          yuicompress: true
-          optimization: 2
-        files:
-          "dist/css/main.css": "styles/main.less"
 
-  # Load Tasks
-  grunt.loadNpmTasks 'grunt-contrib-coffee'
-  grunt.loadNpmTasks 'grunt-contrib-less'
-  grunt.registerTask 'compile', ['coffee', 'less']
+    less:
+      lessToCss:
+        src: 'styles/*.less',
+        dest: 'dist/css/main.css'
+
+  grunt.registerTask 'default', ['coffee', 'less', 'watch']

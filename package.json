@@ -10,10 +10,12 @@
     "coffee-script": "latest",
     "less": "latest",
     "grunt-contrib-coffee": "latest",
-    "grunt-contrib-less": "latest"
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-watch": "latest"
   },
   "scripts": {
     "postinstall": "bower install",
-    "prestart": "npm install & grunt compile"
+    "prestart": "npm install & npm update",
+    "start": "grunt"
   }
 }

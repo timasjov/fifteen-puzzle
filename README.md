@@ -1,4 +1,4 @@
 # 15-puzzle game
 
-* run `npm intall`
+* run `npm start`
 * open `index.html` in browser
