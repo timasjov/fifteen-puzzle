@@ -1,19 +1,27 @@
-@base-background: #f7f7f7;
+@base-background: #faf8ef;
 @empty-cell-background: #ddd;
-@base-font: 12pt 'Arial', 'Helvetica';
 
 body {
-    font: @base-font;
-    background-color: @base-background;
-    margin-top: 110px;
-    margin-left: 20px;
+  margin-top: 80px;
+  background: @base-background;
+}
+
+h1 {
+  font-size: 80px;
+  font-weight: bold;
+  margin: 0;
+  float: left;
+}
+
+.container {
+  width: 500px;
+  margin: 0 auto;
 }
 
 .fifteen-puzzle {
     border: 1px solid #ccc;
     border-spacing: 0;
     clear: both;
-    margin-top: 30px;
 }
 
 .fifteen-puzzle td {

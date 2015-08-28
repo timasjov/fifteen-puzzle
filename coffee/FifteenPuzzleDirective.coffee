@@ -5,12 +5,7 @@ module = angular.module("fifteenPuzzleDirective", [])
 module.directive "fifteenPuzzle", (fifteenPuzzle) ->
   restrict: "EA"
   replace: true
-  template:
-    '<table class="fifteen-puzzle" ng-class="{\'puzzle-solved\': puzzle.isSolved()}">' +
-      '<tr ng-repeat="($row, row) in puzzle.grid">' +
-        '<td ng-repeat="($col, tile) in row" ng-click="puzzle.move($row, $col)" ng-style="tile.style" ng-class="{\'puzzle-empty\': tile.empty}" title="{{tile.id}}"></td>' +
-      '</tr>' +
-    '</table>'
+  templateUrl: "templates/fifteenPuzzle.html"
   scope:
     size: "@"
     src: "@"
